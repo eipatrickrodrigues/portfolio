@@ -7,7 +7,7 @@ Portfolio do desenvolvedor
 
 Em uma atualzação no README podem ser inseridos tópicos como:
 
-:package: 1 - Nova Funcionalidade
-:up: 2 - Atualização
-:beetle: 3 - Correção de Bugs
-:checkered_flag: 4 - Release (Entregas)
+:package: - Nova Funcionalidade
+:up: - Atualização
+:beetle: - Correção de Bugs
+:checkered_flag: - Release (Entregas)
