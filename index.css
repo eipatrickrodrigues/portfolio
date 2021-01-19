@@ -5,3 +5,117 @@
 /* Íncones importados do Fonts Awesome*/
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* ver anotação do .banner */
+    position: relative;
+}
+
+.img-wrapper {
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.8);
+
+}
+
+.img-wrapper img {
+
+    width: 100%;
+    height: 100%;
+    /*Object-fit: cover faz com que a imagem não se modifique ao reduzir a tela.*/
+    object-fit: cover;
+    opacity: 50%;
+    animation: zoom 10s;
+}
+
+/* Criação da animação - zoom da imagem */
+
+@keyframes zoom {
+
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.banner {
+    /* Para o funcionamento da posição absoluta, o banner precisa
+    estar dentro de um posicionamento relativo, no caso, o header. */
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    /* Caso o Google Fonts saia do ar, a fonte importada é desativada, logo é importante deixar uma fonte reserva (serif) */
+    font-family: "Josefin Slab", serif;
+    font-weight: 200px;
+    text-shadow: .3rem .4rem 2px rgba(0,0,0,0.5);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    animation: moveBanner 2s;
+}
+
+.banner p{
+
+    font-family: "Baloo Da 2",serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: .2rem .3rem 2px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+    animation: moveBanner 4s;
+}
+
+.banner button {
+
+    font-family: "Baloo Da 2" serif;
+    font-size: 1.5rem;
+    color: #fffffff5;
+    background: #200122;
+    background: -webkit-linear-gradient(to right, #6f0000, #200122); 
+    background: linear-gradient(to right, #6f0000, #200122);
+    padding: 1rem 2.5rem;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: moveBanner 6s;
+
+}
+
+@keyframes moveBanner{
+
+    0%{
+        transform: translateY(30rem) rotate(-15deg);
+        opacity: 50%;
+    }
+    100%{
+        transform: translateY(0) rotate(0);
+        opacity: 100%;
+    }
+
+}
+
+/* hover é uma classe que identifica uma ação, um evento. Exemplo: quando o mouse passa em cima, muda a opacidade, a cor da fonte.*/
+.banner button:hover{
+
+    color: black;
+    
+}
+
