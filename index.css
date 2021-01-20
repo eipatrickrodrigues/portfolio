@@ -204,7 +204,8 @@ header{
 /* hover é uma classe que identifica uma ação, um evento. Exemplo: quando o mouse passa em cima, muda a opacidade, a cor da fonte.*/
 .banner button:hover{
 
-    color: black;
+    color: #723d75;
+    transition: 2s;
     
 }
 
@@ -419,6 +420,7 @@ header{
 
     width: 20rem;
     height: 30rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
@@ -465,19 +467,21 @@ header{
     font-family: "Baloo Da 2", serif;
     color: #200122;
     margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 1px;
+    font-size: 1.5rem;
+    font-weight: lighter;
 
 }
 
 
+
 .card-info p{
 
-    font-family: "Baloo Da 2";
+    font-family: "Baloo Da 2", serif;
     font-size:  1.1rem;
     line-height: 1.4rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
+    font-weight: lighter;
 
 
 }
@@ -486,8 +490,9 @@ header{
 
     width: 90%;
     height: 3rem;
-    font-family: "Baloo Da 2";
+    font-family: "Baloo Da 2", serif;
     font-size: 1.5rem;
+    font-weight: lighter;
     background: #200122;
     background: -webkit-linear-gradient(to right, #6f0000, #200122); 
     background: linear-gradient(to right, #6f0000, #200122);
@@ -506,11 +511,241 @@ header{
 
 .card:hover .card-img-wrapper img{
 
-    opacity: 30%;
+    opacity: 10%;
     transition: 2s;
 }
 
 .card:hover .card-info button{
 
     color: #723d75;
+}
+
+.card:hover .card-info h3{
+
+    color: #723d75;
+    transition: 2s;
+}
+
+.sessao-contato{
+
+    width: 100%;
+    height: 100vh;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper {
+
+    width: 60%;
+    height: 30rem;
+    display: flex;
+
+}
+
+.contato-left {
+
+    width: 40%;
+    background:
+        linear-gradient(rgba(197, 8, 23, 0.5),rgba(25, 212, 8, 0.1)), 
+        url(imagens/contato.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+.contato-left:hover {
+
+    opacity: 1;
+    transition: 2s;
+}
+
+.contato-right {
+
+    width: 40%;
+    background-color: #cfcfcf;
+    border-radius: 20px;
+    padding: 5rem;
+
+    
+}
+
+
+.sessao-contato h1{
+
+    font-family: "Baloo da 2", serif;
+    font-size: 2rem;
+    color: #200122;
+    font-weight: lighter;
+    text-align: center;
+}   
+
+
+.sessao-contato form{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-group {
+
+    position: relative;
+}
+
+.field{
+
+    background: transparent;
+    border: transparent;
+    text-decoration: overline;
+    width: 25rem;
+    font-size: 1.4rem;
+    font-family: "Baloo Da 2", serif;
+    border-bottom: 2px solid;
+    height: 30px;
+    outline: none;
+    margin: 1.5rem 0;
+}
+
+.input-group textarea{
+
+    max-width: 30rem;
+    max-height: 5rem;
+}
+
+.field-label {
+
+    position: absolute;
+    left: 0;
+    font-family: "Baloo Da 2", serif;
+    text-transform: uppercase;
+    top: 0.1rem;
+}
+
+.field:focus ~ label{
+
+    opacity: 0;
+    transition: 2s;
+}
+
+.button-submit{
+
+    width: 100%;
+    height: 2.2rem;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background: #723d75;
+    border: none;
+    border-radius: 0.9rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #200122;
+}
+
+.button-submit:hover {
+
+    background-color: #200122;
+    color: #723d75;
+    font-size: 1.8rem;
+    transition: 2s;
+    
+}
+
+.sessao-orcamento{
+
+    width: 100%;
+    height: 100vh;
+    background: url(imagens/back_orcamento.jpg);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper{
+
+    position: relative;
+    width: 60%;
+    height: 80%;
+    background-color: #cfcfcf;
+    border-radius: 2rem;
+}
+
+.orcamento-wrapper h1{
+
+    position: absolute;
+    width: 50%;
+    height: 4rem;
+    top: -2rem;
+    left: 3rem;
+    color: #ffffff;
+    font-family: "Baloo Da 2", serif;
+    font-size: 2rem;
+    font-weight: lighter;
+    background: #723d75;
+    border: none;
+    border-radius: 0.9rem;
+    text-align: center;
+    box-shadow: 0.1rem 0.1rem 0.1rem #200122; 
+}
+
+.orcamento-wrapper h1:hover{
+
+    font-size: 2.2rem;
+    transition: 2s;
+}
+
+
+.formulario{
+
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem; 
+
+
+}
+
+.sessao-orcamento label{
+
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.sessao-orcamento input[type="number"]{
+    
+    font-family: "Baloo Da 2", serif;
+    width: 4rem;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.4rem 0.4rem;
+}
+
+.sessao-orcamento button{
+
+    width: 100%;
+    height: 2.2rem;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background: #723d75;
+    border: none;
+    border-radius: 0.9rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem #200122;
+    grid-column: 2;
+}
+
+.sessao-orcamento button:hover{
+
+    background-color: #200122;
+    color: #723d75;
+    font-size: 1.8rem;
+    transition: 2s;
+
 }
