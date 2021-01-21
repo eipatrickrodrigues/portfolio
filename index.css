@@ -13,12 +13,17 @@
     text-decoration: none; /* Retinha o sublinhado dos links */
 }
 
+html{
+
+    scroll-behavior: smooth;
+}
+
 .hamburguer {
 
     width: 2rem;
     height: 2rem;
     position: fixed; /*A posição fixa faz o hambúrguer "flutuar" na tela.*/
-    z-index: 100;
+    z-index: 160;
     right: 2rem;
     top: 2rem;
 
@@ -28,7 +33,17 @@
     justify-content: space-evenly;
     cursor: pointer;
     transition: 2s;
+    animation: moveHamburguer 5s;
+}
 
+@keyframes moveHamburguer{
+
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 100;
+        transform: rotateY(360deg);
+    }
 }
 
 .hamburguer.show_menu {
@@ -83,9 +98,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
     opacity: 0;
 }
+
 
 #span:hover {
 
@@ -218,7 +233,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 2s;
-
+    z-index: 150;
 }
 
 .sidebar.show_menu {
@@ -668,7 +683,7 @@ header{
 
     position: relative;
     width: 60%;
-    height: 80%;
+    height: 85%;
     background-color: #cfcfcf;
     border-radius: 2rem;
 }
@@ -729,8 +744,9 @@ header{
 
 .sessao-orcamento button{
 
+    position: relative;
     width: 100%;
-    height: 2.2rem;
+    height: 2.4rem;
     font-family: "Baloo Da 2", serif;
     font-size: 1.5rem;
     font-weight: lighter;
@@ -749,3 +765,87 @@ header{
     transition: 2s;
 
 }
+
+footer{
+
+    width: 100%;
+    height: 5rem;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer:hover{
+    background-color: #000000;
+    transition: 2s;
+}
+
+footer .content{
+
+    width: 80%;
+    font-family: "Baloo Da 2", serif;
+    font-size: 1.2rem;
+    color: rgb(119, 119, 119);
+}
+
+footer .content p:hover{
+    color: #723d75;
+    font-size: 1.21rem;
+    transition: 2s;
+}
+
+footer .social_list{
+
+    left: 2rem;
+    font-size: 1.6rem;
+    display: inline-flex;
+    gap: 1.2rem;
+    
+}
+
+footer .social_list i{
+    color: rgb(119, 119, 119);
+}
+
+footer .social_list i:hover{
+    color: #723d75;
+    transition: 2s;
+}
+
+#link_topo{
+
+    position: fixed;
+    right: 3rem;
+    bottom: 4rem;
+    width: 2rem;
+    height: 2.2rem;
+    font-size: 2.2rem;    
+    background-color: #000000;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .3rem .4rem 2px rgba(0,0,0,0.5);
+    animation: moveLink_topo 3s;
+
+}
+
+@keyframes moveLink_topo{
+
+    0%{
+        transform: translateX(20rem) rotate(360deg);
+
+    }100%{}
+}
+
+#link_topo:hover{
+
+    background-color: #200122;
+    color: #000000;
+    font-size: 3rem;
+    transition: 0.3s;
+}
+
+
